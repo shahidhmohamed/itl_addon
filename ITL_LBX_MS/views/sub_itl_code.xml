@@ -1,0 +1,21 @@
+<odoo>
+<record id="action_sub_itl_code" model="ir.actions.act_window">
+        <field name="name">ITL CODE</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">sub_itl_code</field>
+        <field name="view_mode">kanban,tree,form</field>
+    </record>
+
+
+    <!-- Start of Tree View -->
+    <record id = "itl_code_01_tree" model = "ir.ui.view">
+        <field name = "name">ITL CODE</field>
+        <field name = "model">sub_itl_code</field>
+        <field name = "arch" type = "xml">
+            <tree>
+                <field name = "ItlCode"/>
+            </tree>
+        </field>
+    </record>
+    <!-- End of Tree View -->
+</odoo>

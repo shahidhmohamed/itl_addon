@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="dashboard" model="ir.actions.act_window">
+        <field name="name">Dashboard</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">lbx_mi_gpo_d001</field>
+        <field name="view_mode">graph</field>
+    </record>
+</odoo>

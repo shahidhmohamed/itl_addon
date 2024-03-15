@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="action_get_po_test" model="ir.actions.act_window">
+        <field name="name">get po test</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">getpo_test</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Start of form View -->
+    <record id="getpo_test_form" model="ir.ui.view">
+        <field name="name">getpo_test</field>
+        <field name="model">getpo_test</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="test" style="font-size: 10px" placeholder="Enter Po Number"/>
+                        </group>
+                        <group>
+                            <button name="getPOdetails" string="GETPO" type="object" class="btn btn-primary" />
+                            <button name="exportpo" string="Export" type="object" class="btn btn-primary"/>
+                        </group>
+                    </group>
+                    <!-- Notebook -->
+                    <!-- <notebook> -->
+                    <!-- <page string="Purchase order" name="Purchase_order"> -->
+                    <field name="get_po_lines">
+                        <tree create="0" editable="0">
+                            <field name="test03"/>
+                            <field name="test04"/>
+                            <field name="test05"/>
+                        </tree>
+                    </field>
+                    <!-- </page> -->
+                    <!-- </notebook> -->
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <!-- End of form View -->
+
+    <!-- Start of treee -->
+    <record id = "getpo_tree" model = "ir.ui.view">
+        <field name = "name">getpo list</field>
+        <field name = "model">getpo_test</field>
+        <field name = "arch" type = "xml">
+            <tree >
+                <field name="test03"/>
+                <field name="test04"/>
+                <field name="test05"/>
+            </tree>
+        </field>
+    </record>
+    <!-- End of Tree View -->
+
+
+
+</odoo>

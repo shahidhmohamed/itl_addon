@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+<!-- Start of kanban section -->
+    <record id = "view_countries_of_origin_kanban" model = "ir.ui.view">
+        <field name = "name">countries.of.origin.kanban</field>
+        <field name ="model">countries.of.origin</field>
+        <field name ="arch" type ="xml">
+            <kanban>
+                <field name = "No"/>
+                <field name = "CountriesOfOriginId"/>
+                <field name = "Description"/>
+                <templates>
+                    <t t-name ="kanban-box">
+                        <div t-attf-class="oe_kanban_global_click">
+                        <div class="o_kanban_image">
+                                <field name = "image" widget="image" class="oe_avatar" />
+                            </div>
+                            <div class="oe_kanban_details" style="font-size:15px;">
+                                <ul>
+                                    <li>
+                                        DESCRIPTION: <field name ="Description" style="font-weight:bolder;"/>
+                                    </li>
+                                    <li>
+                                        CARE INSTRUCTION ID: <field name ="CountriesOfOriginId" />
+                                    </li>
+                                    <li>
+                                        <p style="font-size: 15px; color:#0000FF;">COUNTRY OF ORIGIN</p>
+                                    </li>
+                                    <li>
+                                        <field name="priority" widget="priority" class="mr-1"/>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+    <!-- End of kanban section -->
+
+    <!-- Start of Tree View -->
+    <record id = "countries_of_origin_tree" model = "ir.ui.view">
+        <field name = "name">countries_of_origin</field>
+        <field name = "model">countries.of.origin</field>
+        <field name = "arch" type = "xml">
+            <tree>
+                <field name = "No"/>
+                <field name = "CountriesOfOriginId"/>
+                <field name = "Description"/>
+            </tree>
+        </field>
+    </record>
+    <!-- End of Tree View -->
+
+
+
+    <!-- Start of form View -->
+    <record id = "countries_of_origin_form" model = "ir.ui.view">
+        <field name = "name">Countries of origin Form</field>
+        <field name = "model">countries.of.origin</field>
+        <field name = "arch" type = "xml">
+            <form>
+                <sheet>
+                    <!-- start of button box -->
+                    <div class = "oe_button_box" name ="button_box">
+                        <button class="oe_stat_button" name="action_view_no" icon="fa-list-ul">
+                            <field name="No" string="No" widget="statinfo"/>
+                        </button>
+
+                        <button class="oe_stat_button" name="action_view_CountriesoforiginFormId" icon="fa-list-ul">
+                            <field name="CountriesOfOriginId" string="no" widget="statinfo"/>
+                        </button>
+
+                        <button class="oe_stat_button" name="action_view_description" icon="fa-list-ul">
+                            <field name="Description" string="Description" widget="statinfo"/>
+                        </button>
+                    </div>
+                    <field name = "image" widget="image" class="oe_avatar"/>
+                    <!-- End of button box -->
+                    <group>
+                        <group>
+                            <field name = "Description" style="font-size: 20px;"/>
+                            <field name = "No"/>
+                            <field name = "CountriesOfOriginId"/>
+                        </group>
+                        <group>
+                            <field name="priority" widget="priority" class="mr-3"/>
+                        </group>
+                    </group>
+                </sheet>
+                <!-- Start of Catter -->
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="message_ids"/>
+                </div>
+                <!-- End of Chatter -->
+            </form>
+        </field>
+    </record>
+    <!-- End of form View -->
+
+<!-- action -->
+    <record id="action_countries_of_origin" model="ir.actions.act_window">
+        <field name="name">Countries Of Origin</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">countries.of.origin</field>
+        <field name="view_mode">kanban,tree,form</field>
+    </record>
+</odoo>

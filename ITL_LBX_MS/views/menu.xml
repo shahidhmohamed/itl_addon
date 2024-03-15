@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+
+    <!-- Main Menu Items -->
+    <menuitem id="automation_root" name="Automation" sequence="10" />
+    <!-- <menuitem id="Master_Files" name="Master Files" parent ="automation_root" sequence="20" /> -->
+    <menuitem id="Dashboard" name="Dashboard" parent ="automation_root" action = "dashboard" sequence="10" />
+    <!-- <menuitem id="Transaction" name="Transaction" parent ="automation_root" action = "action_transaction" sequence="30" /> -->
+    <menuitem id="sub_master_files" name="Master Files" parent ="automation_root" action = "action_type_lab_new" sequence="40" />
+    <!-- <menuitem id="Reports" name="Reports" parent ="automation_root" action = "action_get_po_test" sequence="50" /> -->
+    <menuitem id="Transaction" name="Transaction" parent ="automation_root" action = "action_mas_integration_get_po" sequence="60" />
+
+    <!-- Master File Menu Items -->
+    <!-- <menuitem id="Care_Instruction" name="Master_file_1" parent ="Master_Files" action ="action_care_instructions" sequence="10" />
+    <menuitem id="Care_Instruction_text" name="Care Instruction" parent ="Care_Instruction" action ="action_care_instructions" sequence="10" />
+    <menuitem id="Care_Instruction_Set" name="Care Instruction Set" parent ="Care_Instruction" action ="action_care_instructions_set" sequence="20" />
+    <menuitem id="Components" name="Components" parent ="Care_Instruction" action ="action_components" sequence="30" />
+    <menuitem id="Countries_Of_Origin" name="Countries Of Origin" parent ="Care_Instruction" action ="action_countries_of_origin" sequence="40" />
+    <menuitem id="Fibres" name="Fibres" parent ="Care_Instruction" action ="action_fibres" sequence="50" />
+    <menuitem id="WashSymbols" name="Wash Symbols" parent ="Care_Instruction" action ="action_washsymbols" sequence="60" />
+
+    <menuitem id="Master_file_2" name="Master_file_2" parent ="Master_Files" action ="action_fibres" sequence="70" />
+    <menuitem id="Brands" name="Brands" parent ="Master_file_2" action ="action_brands" sequence="80" />
+    <menuitem id="Get_vs_Sores_Options" name="Get vs Sores Options" parent ="Master_file_2" action ="action_get_vs_stores_options" sequence="90" />
+    <menuitem id="Multi_Part_Sets" name="Multi Part Sets" parent ="Master_file_2" action ="action_multi_part_sets" sequence="90" />
+    <menuitem id="caution" name="Caution" parent ="Master_file_2" action ="action_caution" sequence="100" />
+    <menuitem id="ChildWarnings" name="Child Warnings" parent ="Master_file_2" action ="action_ChildWarnings" sequence="110" />
+    <menuitem id="AdditionalInstructions" name="AdditionalInstructions" parent ="Master_file_2" action ="action_AdditionalInstructions" sequence="120" />
+
+    <menuitem id="Master_file_3" name="Master_file_3" parent ="Master_Files" action ="action_fibres" sequence="130" />
+    <menuitem id="Copyrights" name="Copyrights" parent ="Master_file_3" action ="action_copyrights" sequence="140" />
+    <menuitem id="PantoneRefs" name="Pantone Refs" parent ="Master_file_3" action ="action_pantonerefs" sequence="150" />
+    <menuitem id="TextColours" name="Text Colours" parent ="Master_file_3" action ="action_textcolours" sequence="160" />
+    <menuitem id="Departments" name="Departments" parent ="Master_file_3" action ="action_departments" sequence="170" />
+    <menuitem id="ProductDescriptions" name="Product Descriptions" parent ="Master_file_3" action ="action_productdescriptions" sequence="130" />
+    <menuitem id="GetChains" name="GetChains" parent ="Master_file_3" action ="action_getchains" sequence="130" />
+    <menuitem id="ProductBenifits" name="Product Benifits" parent ="Master_file_3" action ="action_productbenifits" sequence="190" />
+
+    <menuitem id="Master_file_4" name="Master_file_4" parent ="Master_Files" action ="action_fibres" sequence="130" />
+    <menuitem id="ProductDescriptions" name="Product Descriptions" parent ="Master_file_4" action ="action_productdescriptions" sequence="130" />
+    <menuitem id="TogRatings" name="Tog Ratings" parent ="Master_file_4" action ="action_togratings" sequence="130" />
+    <menuitem id="Seasons" name="Seasons" parent ="Master_file_4" action ="action_seasons" sequence="130" />
+    <menuitem id="GetITLOffices" name="Get ITL Offices" parent ="Master_file_4" action ="action_getitlOffices" sequence="130" />
+    <menuitem id="Customers" name="Customers" parent ="Master_file_4" action ="action_customers" sequence="130" />
+    <menuitem id="Products" name="Products" parent ="Master_file_4" action ="action_products" sequence="130" />
+    <menuitem id="Sizes" name="Sizes" parent ="Master_file_4" action ="action_sizes" sequence="130" /> -->
+
+    <!-- MAS GE po And Get Vpo -->
+    <menuitem id="menu_item_mas" name="MAS" parent ="Transaction" action = "action_mas_integration_get_po" sequence="10" />
+    <menuitem id="PO_MAS" name="PO-MAS" parent ="menu_item_mas" action = "action_mas_integration_get_po" sequence="10" />
+    <menuitem id="VPO_MAS" name="VPO-MAS" parent ="menu_item_mas" action ="action_lbx_mi_vpo_d001" sequence="20" />
+    <menuitem id="menu_item_brandix" name="BRANDIX" parent ="Transaction" action = "action_brandix_integration_get_po" sequence="10" />
+    <menuitem id="PO_BRANDIX" name="PO-BRANDIX" parent ="menu_item_brandix" action ="action_brandix_integration_get_po" sequence="30" />
+    <menuitem id="VPO_BRANDIX" name="VPO-BRANDIX" parent ="menu_item_brandix" action ="action_brandix_integration_vpo" sequence="40" />
+    <menuitem id="OTHERS" name="OTHERS" parent ="Transaction" action = "action_mas_integration_get_po" sequence="50" />
+    <menuitem id="PO_OTHERS" name="PO_OTHERS" parent ="OTHERS" action = "action_mas_integration_get_po" sequence="60" />
+    <menuitem id="VPO_OTHERS" name="VPO_OTHERS" parent ="OTHERS" action ="action_lbx_mi_vpo_d001" sequence="70" />
+
+    <!-- Material map -->
+    <menuitem id="chain_sub" name="Chain Master" action="action_chain_sub" parent ="sub_master_files" sequence="50" />
+    <menuitem id="sub_itl_code" name="ITL Code Master" action="action_sub_itl_code" parent ="sub_master_files" sequence="60" />
+    <!-- <menuitem id="sub_product" name="Product Reference Master" action="action_sub_product" parent ="sub_master_files" sequence="70" /> -->
+
+    <!--Composition-->
+    <menuitem id="composition" name="Composition" action="action_sub_product" parent ="sub_master_files" sequence="70" />
+    <menuitem id="set_fiber" name="Composition Master" action="action_set_fiber" parent ="composition" sequence="100" />
+    <menuitem id="sub_fiber" name="Fiber Master" action="action_sub_fiber" parent ="composition" sequence="110" />
+    <menuitem id="sub_component" name="Component Master" action="action_sub_components" parent ="composition" sequence="120" />
+    
+    <!-- <menuitem id="sub_care_instruction_set_code" name="Care Instruction Code Details" action="action_care_instruction_set_code" parent ="sub_master_files" sequence="130" /> -->
+
+    <!-- size -->
+    <menuitem id="size" name="Size" action="action_size_master" parent ="sub_master_files" sequence="140" />
+    <menuitem id="size_master" name="Size Master" action="action_size_master" parent ="size" sequence="140" />
+    <menuitem id="size_range" name="Size Range Master" action="action_size_mapping" parent ="size" sequence="150" />
+    <menuitem id="size_mapping" name="Size Mapping" action="action_range_master" parent ="size" sequence="160" />
+
+    <!-- Others -->
+    <menuitem id="others_master" name="Others" action="action_coo_master" parent ="sub_master_files" sequence="170" />
+    <menuitem id="coo_master" name="Country of Origin" action="action_coo_master" parent ="others_master" sequence="170" />
+    <menuitem id="color_code_master" name="Color Mapping Master" action="action_color_code_master" parent ="others_master" sequence="180" />
+    <menuitem id="season_master" name="Season Master" action="action_season_master" parent ="others_master" sequence="190" />
+    <menuitem id="product_reference_master" name="Product Reference Master" action="action_reference_master" parent ="others_master" sequence="200" />
+    <menuitem id="silhouette_master" name="Silhouette Master" action="action_silhouette_master" parent ="others_master" sequence="230" />
+    <menuitem id="collection_master" name="Collection Master" action="action_collection_master" parent ="others_master" sequence="240" />
+
+    <!-- Careinstruction -->
+    <menuitem id="care_instruction" name="Care Instruction" action="action_AdditionalInstructions" parent ="sub_master_files" sequence="210" />
+    <menuitem id="a_instruction_master" name="Additional Ins Master" action="action_AdditionalInstructions" parent ="care_instruction" sequence="250" />
+    <menuitem id="care_instruction_master" name="Care Ins Master" action="action_careInstructions" parent ="care_instruction" sequence="220" />
+
+
+
+</odoo>

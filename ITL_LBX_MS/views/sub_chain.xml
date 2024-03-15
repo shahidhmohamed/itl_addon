@@ -1,0 +1,22 @@
+<odoo>
+<record id="action_chain_sub" model="ir.actions.act_window">
+        <field name="name">Chain Details</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">sub_chain</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <!-- Start of Tree View -->
+    <record id = "chain_sub_tree" model = "ir.ui.view">
+        <field name = "name">Chain Details</field>
+        <field name = "model">sub_chain</field>
+        <field name = "arch" type = "xml">
+            <tree>
+                <field name = "ChainId"/>
+                <field name = "ChainName"/>
+            </tree>
+        </field>
+    </record>
+    <!-- End of Tree View -->
+</odoo>

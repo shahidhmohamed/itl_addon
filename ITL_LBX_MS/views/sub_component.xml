@@ -1,0 +1,21 @@
+<odoo>
+<record id="action_sub_components" model="ir.actions.act_window">
+        <field name="name">Component Master</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">sub_components</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <!-- Start of Tree View -->
+    <record id = "sub_components_tree" model = "ir.ui.view">
+        <field name = "name">Component Master</field>
+        <field name = "model">sub_components</field>
+        <field name = "arch" type = "xml">
+            <tree>
+                <field name = "ComponentName"/>
+            </tree>
+        </field>
+    </record>
+    <!-- End of Tree View -->
+</odoo>

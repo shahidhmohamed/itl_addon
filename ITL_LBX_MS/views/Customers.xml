@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Start of kanban section -->
+    <record id = "view_Customers_kanban" model = "ir.ui.view">
+        <field name = "name">Customers</field>
+        <field name ="model">lbx_customers</field>
+        <field name ="arch" type ="xml">
+            <kanban>
+                <field name = "No"/>
+                <field name = "ocscustno"/>
+                <field name = "name"/>
+                <field name = "delivery_name"/>
+                <field name = "address1"/>
+                <field name = "address2"/>
+                <field name = "address3"/>
+                <field name = "Country"/>
+                <templates>
+                    <t t-name ="kanban-box">
+                        <div t-attf-class="oe_kanban_global_click">
+                            <div class="o_kanban_image">
+                                <field name = "image" widget="image" class="oe_avatar" />
+                            </div>
+                            <div class="oe_kanban_details" style="font-size:15px;">
+                                <div class="o_kanban_record_top mb-0">
+                                    <div class="o_kanban_record_headings">
+                                        <strong class="o_kanban_record_title">
+                                            <field name="name"/>
+                                        </strong>
+                                    </div>
+                                    <field name="priority" widget="priority"/>
+                                </div>
+                                <ul>
+                                    <li>
+                                        CUSTOMER: <field name ="name" />
+                                    </li>
+                                    <li>
+                                        <p style="font-size: 15px; color:#0000FF;">CUSTOMER</p>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+    <!-- End of kanban section -->
+
+
+    <!-- Start of form View -->
+    <record id = "Customers_form" model = "ir.ui.view">
+        <field name = "name">Customers Form</field>
+        <field name = "model">lbx_customers</field>
+        <field name = "arch" type = "xml">
+            <form>
+                <sheet>
+
+                    <!-- start of button box -->
+                    <div class = "oe_button_box" name ="button_box">
+                        <button class="oe_stat_button" name="action_view_no" icon="fa-list-ul">
+                            <field name="No" string="No" widget="statinfo"/>
+                        </button>
+
+                        <button class="oe_stat_button" name="action_view_name" icon="fa-list-ul">
+                            <field name="name" string="name" widget="statinfo"/>
+                        </button>
+
+                        <button class="oe_stat_button" name="action_view_delivery_name" icon="fa-list-ul">
+                            <field name="delivery_name" string="delivery_name" widget="statinfo"/>
+                        </button>
+                    </div>
+
+                    <field name = "image" widget="image" class="oe_avatar"/>
+                    <!-- End of button box -->
+                    <group>
+                        <group>
+                            <field name = "name" style="font-size: 20px;"/>
+                            <field name = "ocscustno"/>
+                            <field name = "delivery_name"/>
+                            <field name="priority" widget="priority"/>
+                        </group>
+                        <group>
+                            <field name = "address1"/>
+                            <field name = "address2"/>
+                            <field name = "address3"/>
+                            <field name = "Country"/>
+                        </group>
+                    </group>
+
+                    <!-- Note book -->
+
+                    <notebook>
+                        <page string="name" name="Tab1">
+                            <group>
+                                <field name = "name"/>
+                            </group>
+                        </page>
+                        <page string="delivery_name" name="Tab2">
+                            <group>
+                                <field name = "delivery_name"/>
+                            </group>
+                        </page>
+                        <page string="address1" name="Tab3">
+                            <group>
+                                <field name = "address1"/>
+                            </group>
+                        </page>
+                    </notebook>
+
+
+
+                </sheet>
+                <!-- Start of Catter -->
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="message_ids"/>
+                    <field name="activity_ids"/>
+                </div>
+                <!-- End of Chatter -->
+            </form>
+        </field>
+    </record>
+    <!-- End of form View -->
+
+
+    <!-- Start of Tree View -->
+    <record id = "Customers_tree" model = "ir.ui.view">
+        <field name = "name">Customers</field>
+        <field name = "model">lbx_customers</field>
+        <field name = "arch" type = "xml">
+            <tree>
+                <field name = "No"/>
+                <field name = "name"/>
+                <field name = "delivery_name"/>
+            </tree>
+        </field>
+    </record>
+    <!-- End of Tree View -->
+
+
+
+    <record id="action_customers" model="ir.actions.act_window">
+        <field name="name">Customers</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">lbx_customers</field>
+        <field name="view_mode">kanban,tree,form</field>
+    </record>
+</odoo>

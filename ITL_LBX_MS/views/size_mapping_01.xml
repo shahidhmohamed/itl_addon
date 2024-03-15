@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="action_range_master" model="ir.actions.act_window">
+        <field name="name">SIZE RANGE MAPPING</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">size_map_main</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Start of form View -->
+    <record id="size_range_form" model="ir.ui.view">
+        <field name="name">SIZE RANGE MAPPING</field>
+        <field name="model">size_map_main</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="Size_Range"/>
+                        </group>
+                    </group>
+
+                    <notebook>
+                        <page string="SIZE" name="size">
+                            <field name="size_lines">
+                                <tree editable="bottom">
+                                    <!-- <field name="Size"/> -->
+                                    <field name="Size"/>
+                                    <field name="Size_LV"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Start of Tree View -->
+    <record id = "size_range_tree" model = "ir.ui.view">
+        <field name = "name">SIZE RANGE MAPPING</field>
+        <field name = "model">size_map_main</field>
+        <field name = "arch" type = "xml">
+            <tree>
+                <field name = "size_lines"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id = "size_map_search" model = "ir.ui.view">
+        <field name = "name">size map search</field>
+        <field name = "model">size_map_main</field>
+        <field name = "arch" type = "xml">
+            <search>
+                <field name = "size_lines" string="SIZE RANGE"/>
+            </search>
+        </field>
+    </record>
+
+
+
+
+</odoo>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="action_size_master" model="ir.actions.act_window">
+        <field name="name">SIZE MASTER</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">lbx_size_master</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <!-- Start of form View
+    <record id="size_master_form" model="ir.ui.view">
+        <field name="name">SIZE MASTER</field>
+        <field name="model">lbx_size_master</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                </sheet>
+            </form>
+        </field>
+    </record> -->
+
+    <!-- Start of Tree View -->
+    <record id = "size_master_tree" model = "ir.ui.view">
+        <field name = "name">SIZE MASTER</field>
+        <field name = "model">lbx_size_master</field>
+        <field name = "arch" type = "xml">
+            <tree editable="bottom">
+                <field name = "size_id"/>
+                <field name = "size"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id = "size_master_search" model = "ir.ui.view">
+        <field name = "name">SIZE MASTER SEARCH</field>
+        <field name = "model">lbx_size_master</field>
+        <field name = "arch" type = "xml">
+            <search>
+                <field name = "size_id" string="SIZE ID"/>
+                <field name = "size" string="SIZE"/>
+            </search>
+        </field>
+    </record>
+
+</odoo>

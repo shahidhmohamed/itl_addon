@@ -1,0 +1,23 @@
+<odoo>
+<record id="action_sub_product" model="ir.actions.act_window">
+        <field name="name">PRODUCT</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">sub_product_details</field>
+        <field name="view_mode">kanban,tree,form</field>
+    </record>
+
+
+    <!-- Start of Tree View -->
+    <record id = "product_sub_tree" model = "ir.ui.view">
+        <field name = "name">PRODUCT</field>
+        <field name = "model">sub_product_details</field>
+        <field name = "arch" type = "xml">
+            <tree>
+                <field name = "ProductRef"/>
+                <field name = "ProductDescription"/>
+                <field name = "Classification"/>
+            </tree>
+        </field>
+    </record>
+    <!-- End of Tree View -->
+</odoo>

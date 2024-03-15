@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_size_id_form" model="ir.ui.view">
+        <field name="name">size_id.form</field>
+        <field name="model">size_id</field>
+        <field name="arch" type="xml">
+            <form>
+
+            </form>
+        </field>
+    </record>
+
+    <record id="view_size_id_tree" model="ir.ui.view">
+        <field name="name">size_id.tree</field>
+        <field name="model">size_id</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="No"/>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+
+
+
+    <record id="action_size_id" model="ir.actions.act_window">
+        <field name="name">Size ID</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">size_id</field>
+        <field name="view_mode">kanban,tree,form</field>
+    </record>
+
+
+    
+</odoo>

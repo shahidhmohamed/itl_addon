@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+<record id = "test_transaction_form" model = "ir.ui.view">
+        <field name = "name">test_transaction</field>
+        <field name = "model">test_transaction</field>
+        <field name = "arch" type = "xml">
+            <form>
+                <header>
+                    <!-- <button name="state" widget="statusbar" options="{'clickable':'1'}"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,sent,purchase" readonly="1"/> -->
+                </header>
+                <sheet>
+
+                    <div class="oe_title">
+                        <span class="o_form_label">Automation Purchase Order </span>
+                        <h1 class="d-flex">
+                            <field name="priority" widget="priority" class="me-3"/>
+                            <field name="PO_NO" readonly="1"/>
+                        </h1>
+                    </div>
+
+                    <group>
+                        <group>
+                            <field name = "name" style="font-size: 15px;"/>
+                            <field name = "Confirmationdate"/>
+                            <field name = "Vandor"/>
+                            <field name = "Company"/>
+                            <field name = "Buyer"/>
+                            
+                        </group>
+                        <group>
+                            <field name = "Activities"/>
+                            <field name = "currency_id"/>
+                        </group>
+                    </group>
+
+                    <notebook>
+                        <page string="Purchase order" name="Purchase order">
+                            <div class="oe_title">
+                        <span class="o_form_label">Automation Purchase Order </span>
+                        <h1 class="d-flex">
+
+                        </h1>
+                    </div>
+
+                    <group>
+                        <group>
+                            <field name = "PurchaseOrderNo"/>
+                            <field name = "LastRevisionDate"/>
+                            <field name = "PurchaseOrderLine"/>
+                            <field name = "MaterialCode"/>
+                            <field name = "RefMaterial"/>
+                            <field name = "MaterialDescription"/>
+                            <field name = "Materialid"/>
+                            <field name = "SalesOrder"/>
+                            <field name = "Cus_order"/>
+                            <field name = "Style"/>
+                        </group>
+                        <group>
+                            <field name = "Color_code"/>
+                            <field name = "Per"/>
+                            <field name = "Reference"/>
+                            <field name = "Size_id"/>
+                            <field name = "Net_value"/>
+                            <field name = "SOLine"/>
+                            <field name = "Quantity"/>
+                            <field name = "UoM"/>
+                            <field name = "NetPrice"/>
+                            <field name = "DDate"/>
+                            <field name = "Total"/>
+                        </group>
+                    </group>
+                        </page>
+                    </notebook>
+                </sheet>
+                <!-- Start of Catter -->
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" groups="base.group_user"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
+                <!-- End of Chatter -->
+            </form>
+        </field>
+
+    </record>
+
+
+<record id="action_test_transaction" model="ir.actions.act_window">
+        <field name="name">test_transaction</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">test_transaction</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+</odoo>

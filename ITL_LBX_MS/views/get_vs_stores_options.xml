@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<!-- Start of kanban section -->
+    <record id = "get_vs_stores_options_kanban" model = "ir.ui.view">
+        <field name = "name">get.vs.stores.options.kanban</field>
+        <field name ="model">get.vs.stores.options</field>
+        <field name ="arch" type ="xml">
+            <kanban>
+                <field name = "No"/>
+                <field name = "StoresId"/>
+                <field name = "Storesdescription"/>
+                <templates>
+                    <t t-name ="kanban-box">
+                        <div t-attf-class="oe_kanban_global_click">
+                        <div class="o_kanban_image">
+                                <field name = "image" widget="image" class="oe_avatar" />
+                            </div>
+                            <div class="oe_kanban_details" style="font-size:15px;">
+                                <ul>
+                                    <li>
+                                        DESCRIPTION: <field name ="Storesdescription" style="font-weight:bolder;"/>
+                                    </li>
+                                    <li>
+                                        STORES ID: <field name ="StoresId" />
+                                    </li>
+                                    <li>
+                                        <p style="font-size: 15px; color:#0000FF;">GET VS STORES OPTION</p>
+                                    </li>
+                                    <li>
+                                        <field name="priority" widget="priority" class="mr-1"/>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+    <!-- End of kanban section -->
+
+    <!-- Start of Tree View -->
+    <record id = "get_vs_stores_options_tree" model = "ir.ui.view">
+        <field name = "name">Get vs Sores Options</field>
+        <field name = "model">get.vs.stores.options</field>
+        <field name = "arch" type = "xml">
+            <tree>
+                <field name = "No"/>
+                <field name = "StoresId"/>
+                <field name = "Storesdescription"/>
+            </tree>
+        </field>
+    </record>
+    <!-- End of Tree View -->
+
+    <!-- Start of form View -->
+    <record id = "get_vs_stores_options_form" model = "ir.ui.view">
+        <field name = "name">Get vs Sores Options Form</field>
+        <field name = "model">get.vs.stores.options</field>
+        <field name = "arch" type = "xml">
+            <form>
+                <sheet>
+                    <!-- start of button box -->
+                    <div class = "oe_button_box" name ="button_box">
+                        <button class="oe_stat_button" name="action_view_no" icon="fa-list-ul">
+                            <field name="No" string="No" widget="statinfo"/>
+                        </button>
+
+                        <button class="oe_stat_button" name="action_view_StoresId" icon="fa-list-ul">
+                            <field name="StoresId" string="no" widget="statinfo"/>
+                        </button>
+
+                        <button class="oe_stat_button" name="action_view_Storesdescription" icon="fa-list-ul">
+                            <field name="Storesdescription" string="Storesdescription" widget="statinfo"/>
+                        </button>
+                    </div>
+                    <field name = "image" widget="image" class="oe_avatar"/>
+                    <!-- End of button box -->
+                    <group>
+                        <group>
+                            <field name = "Storesdescription" style="font-size: 20px;"/>
+                            <field name = "No"/>
+                            <field name = "StoresId"/>
+                        </group>
+                        <group>
+                            <field name="priority" widget="priority" class="mr-3"/>
+                        </group>
+                    </group>
+                </sheet>
+                <!-- Start of Catter -->
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="message_ids"/>
+                </div>
+                <!-- End of Chatter -->
+            </form>
+        </field>
+    </record>
+    <!-- End of form View -->
+
+    <!-- Action -->
+    <record id="action_get_vs_stores_options" model="ir.actions.act_window">
+        <field name="name">Get vs Sores Options</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">get.vs.stores.options</field>
+        <field name="view_mode">kanban,tree,form</field>
+    </record>
+</odoo>

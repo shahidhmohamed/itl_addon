@@ -1,0 +1,21 @@
+<odoo>
+<record id="action_care_instruction_set_code" model="ir.actions.act_window">
+        <field name="name">care instruction set code</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">care_instruction_set_code</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <!-- Start of Tree View -->
+    <record id = "care_instruction_set_code_tree" model = "ir.ui.view">
+        <field name = "name">care instruction set code</field>
+        <field name = "model">care_instruction_set_code</field>
+        <field name = "arch" type = "xml">
+            <tree>
+                <field name = "CareInstructionSetCode"/>
+            </tree>
+        </field>
+    </record>
+    <!-- End of Tree View -->
+</odoo>

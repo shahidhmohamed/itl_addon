@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="action_brandix_integration_vpo" model="ir.actions.act_window">
+        <field name="name">BRANDIX INTEGRATION - GETVPO</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">lbx_bi_vpo_h001</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <!-- Start of form View -->
+    <record id="brandix_integration_VPO_form" model="ir.ui.view">
+        <field name="name">BRANDIX INTEGRATION - VPO FORM</field>
+        <field name="model">lbx_bi_vpo_h001</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet style="background-color:#043553;">
+                    <group>
+                        <group>
+                            <field name="VpoUniqNo"/>
+                            <field name="Po_number_get"/>
+                        </group>
+                        <group>
+                        </group>
+                        <group>
+                            <button name="getVPOdetails" string="GETVPO" type="object" class="btn-lbx" />
+                            <!-- <button name="replace_sizes" string="MATCHSIZE" type="object" class="btn btn-primary" /> -->
+                        </group>
+
+
+                    </group>
+                    <!-- Notebook -->
+                    <!-- <notebook> -->
+                    <!-- <page string="Purchase order" name="Purchase_order"> -->
+                    <field name="vpo_lines">
+                        <tree editable="bottom">
+                            <field name="PoNumber"/>
+                            <field name="ProductReference"/>
+                            <field name="Style"/>
+                            <field name="CC"/>
+                            <field name="Size" optional="show"/>
+                            <field name="newsize" optional="show"/>
+                            <!-- <field name="CustomerColorCode" optional="show"/>
+                            <field name="CustomerSizeCode" optional="show"/> -->
+                            <field name="RetailPrice1" optional="show"/>
+                            <field name="Usd" optional="show"/>
+                            <field name="RetailPrice2" optional="show"/>
+                            <field name="Cad" optional="show"/>
+                            <field name="RetailPrice3" optional="show"/>
+                            <field name="Gbp" optional="show"/>
+                            <field name="Sku" optional="show"/>
+                            <field name="Desc1" optional="show"/>
+                            <field name="Article" optional="show"/>
+                            <field name="OrderQuantity" optional="show"/>
+                            <!-- <field name="VarientNo" optional="show"/>
+                            <field name="CustomerArticle" optional="show"/>
+                            <field name="Upc" optional="show"/>
+                            <field name="Desc" optional="show"/> -->
+                            <field name="composition_Desc" optional="show"/>
+                            <field name="c_id" optional="show"/>
+
+                            <!-- <field name="Date_code" optional="show"/>
+                            <field name="ID" optional="show"/>
+                            <field name="Silhouette" optional="show"/>
+                            <field name="CareCode" optional="show"/>
+                            <field name="composition" optional="show"/>
+                            <field name="Collection" optional="show"/> -->
+                        </tree>
+                    </field>
+                    <!-- </page> -->
+                    <!-- </notebook> -->
+                </sheet>
+                <!-- Start of Catter -->
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="message_ids"/>
+                </div>
+                <!-- End of Chatter -->
+            </form>
+        </field>
+    </record>
+
+
+    <!-- Start of Tree View -->
+    <record id = "lbx_brandix_vpo_d001_tree" model = "ir.ui.view">
+        <field name = "name">BRANDIX INTEGRATION - GETVPO</field>
+        <field name = "model">lbx_bi_vpo_h001</field>
+        <field name = "arch" type = "xml">
+            <tree>
+                <!-- <field name="VpoUniqNo"/> -->
+                <field name = "Po_number_get"/>
+            </tree>
+        </field>
+    </record>
+    <!-- End of Tree View -->
+
+    <record id = "vpo_brandix_search" model = "ir.ui.view">
+        <field name = "name">vpo BRANDIX search</field>
+        <field name = "model">lbx_bi_vpo_h001</field>
+        <field name = "arch" type = "xml">
+            <search>
+                <field name = "Po_number_get" string="VPO NUMBER"/>
+            </search>
+        </field>
+    </record>
+</odoo>

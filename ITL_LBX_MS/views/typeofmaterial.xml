@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+    <record id="type_material_new_tree" model="ir.ui.view">
+        <field name="name">type of material tree</field>
+        <field name="model">material.mapping</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom">
+                <field name="name"/>
+                <field name="sizeid"/>
+                <field name="style"/>
+                <field name="color"/>
+                <field name="date"/>
+                <field name="bgcolor"/>
+                <field name="season"/>
+                <field name="RN"/>
+                <field name="CA"/>
+                <field name="ID"/>
+                <field name="silhouette"/>
+                <field name="carecode"/>
+                <field name="composition"/>
+                <field name="collection"/>
+                <field name="article"/>
+                <field name="sizes"/>
+                <field name="qty"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_type_lab_new" model="ir.actions.act_window">
+        <field name="name">Type of Label</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">material.mapping</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+</odoo>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Start of form View -->
+    <record id = "getpo_form" model = "ir.ui.view">
+        <field name = "name">getpo Form</field>
+        <field name = "model">getpo</field>
+        <field name = "arch" type = "xml">
+            <form>
+                <sheet>
+                <header>
+                    <button name="getPOdetails" string="GET"  type="object" class="btn btn-primary"/>
+                </header>
+                    <group>
+                        <group>
+                            <field name = "MAS"/>
+                            <field name = "BRANDIX"/>
+                            <!-- <button id="button_get_mas_po" name="action_button_get_mas_po" string="Get Po MAS" class="oe_highlight" confirm="PO successfully"/> -->
+                        </group>
+                    </group>
+
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <!-- End of form View -->
+
+
+    <!-- Start of treee -->
+    <record id = "getpo_tree" model = "ir.ui.view">
+        <field name = "name">getpo</field>
+        <field name = "model">getpo</field>
+        <field name = "arch" type = "xml">
+            <tree >
+                <header>
+                    <button name="getPOdetails" string="GET PO"  type="object" class="oe_highlight"/>
+                </header>
+                <field name = "PurchaseOrderNo" optional="show"/>
+                <field name = "LastRevisionDate" optional="show"/>
+                <field name = "PurchaseOrderLine" optional="show"/>
+                <field name = "MaterialCode" optional="show"/>
+                <field name = "RefMaterial" optional="show"/>
+                <field name = "MaterialDescription" optional="show"/>
+                <field name = "Materialid" optional="show"/>
+                <field name = "SalesOrder" optional="show"/>
+                <field name = "SOLine" optional="show"/>
+                <field name = "Cus_order" optional="show"/>
+                <field name = "Per" optional="show"/>
+                <field name = "Reference" optional="show"/>
+                <field name = "Size_id" optional="show"/>
+                <field name = "Net_value" optional="show"/>
+                <field name = "NetPrice" optional="show"/>
+                <field name = "Quantity" optional="show"/>
+                <field name = "UoM" optional="show"/>
+                <field name = "DDate" optional="show"/>
+                <field name = "Style" optional="show"/>
+                <field name = "Color_code" optional="show"/>
+            </tree>
+        </field>
+    </record>
+    <!-- End of Tree View -->
+
+
+
+    <record id="action_get_po" model="ir.actions.act_window">
+        <field name="name">get po</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">getpo</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

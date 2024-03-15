@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Start of Tree View -->
+    <record id = "careInstructions_tree" model = "ir.ui.view">
+        <field name = "name">CARE INSTRUCTION SET CODE</field>
+        <field name = "model">lbx_care_instruction_set_code</field>
+        <field name = "arch" type = "xml">
+            <tree editable ="bottom">
+                <field name = "care_instruction_set_code"/>
+                <field name = "care_instruction_set_code_2"/>
+            </tree>
+        </field>
+    </record>
+    <!-- End of Tree View -->
+
+
+
+
+
+    <record id="action_careInstructions" model="ir.actions.act_window">
+        <field name="name">CARE INSTRUCTION SET CODE</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">lbx_care_instruction_set_code</field>
+        <field name="view_mode">tree</field>
+    </record>
+</odoo>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="action_color_code_master" model="ir.actions.act_window">
+        <field name="name">COLOR MASTER</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">color_code_master</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+
+    <!-- Start of Tree View -->
+    <record id = "color_code_tree" model = "ir.ui.view">
+        <field name = "name">COLOR MASTER</field>
+        <field name = "model">color_code_master</field>
+        <field name = "arch" type = "xml">
+            <tree editable="bottom">
+                <field name = "color_po"/>
+                <field name = "color_vpo"/>
+            </tree>
+        </field>
+    </record>
+
+</odoo>

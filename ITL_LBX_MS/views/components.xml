@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Start of kanban section -->
+    <record id = "view_components_kanban" model = "ir.ui.view">
+        <field name = "name">components.kanban</field>
+        <field name ="model">itl_components</field>
+        <field name ="arch" type ="xml">
+            <kanban>
+                <field name = "No"/>
+                <field name = "ComponentsId"/>
+                <field name = "Description"/>
+                <templates>
+                    <t t-name ="kanban-box">
+                        <div t-attf-class="oe_kanban_global_click">
+                        <div class="o_kanban_image">
+                                <field name = "image" widget="image" class="oe_avatar" />
+                            </div>
+                            <div class="oe_kanban_details" style="font-size:15px;">
+                                <ul>
+                                    <li>
+                                        DESCRIPTION: <field name ="Description" style="font-weight:bolder;"/>
+                                    </li>
+                                    <li>
+                                        CARE INSTRUCTION ID: <field name ="ComponentsId" />
+                                    </li>
+                                    <li>
+                                        <p style="font-size: 15px; color:#0000FF;">COMPONENTS</p>
+                                    </li>
+                                    <li>
+                                        <field name="priority" widget="priority" class="mr-1"/>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+    <!-- End of kanban section -->
+
+    <!-- Start of Tree View -->
+    <record id = "components_tree" model = "ir.ui.view">
+        <field name = "name">Components</field>
+        <field name = "model">itl_components</field>
+        <field name = "arch" type = "xml">
+            <tree>
+                <field name = "No"/>
+                <field name = "ComponentsId"/>
+                <field name = "Description"/>
+            </tree>
+        </field>
+    </record>
+    <!-- End of Tree View -->
+
+
+    <!-- Start of form View -->
+    <record id = "components_form" model = "ir.ui.view">
+        <field name = "name">Components Form</field>
+        <field name = "model">itl_components</field>
+        <field name = "arch" type = "xml">
+            <form>
+                <sheet>
+                    <!-- start of button box -->
+                    <div class = "oe_button_box" name ="button_box">
+                        <button class="oe_stat_button" name="action_view_no" icon="fa-list-ul">
+                            <field name="No" string="No" widget="statinfo"/>
+                        </button>
+
+                        <button class="oe_stat_button" name="action_view_CareInstructionsId" icon="fa-list-ul">
+                            <field name="ComponentsId" string="no" widget="statinfo"/>
+                        </button>
+
+                        <button class="oe_stat_button" name="action_view_description" icon="fa-list-ul">
+                            <field name="Description" string="Description" widget="statinfo"/>
+                        </button>
+                    </div>
+                    <field name = "image" widget="image" class="oe_avatar"/>
+                    <!-- End of button box -->
+                    <group>
+                        <group>
+                            <field name = "Description" style="font-size: 20px;"/>
+                            <field name = "No"/>
+                            <field name = "ComponentsId"/>
+                        </group>
+                        <group>
+                            <field name="priority" widget="priority" class="mr-3"/>
+                        </group>
+                    </group>
+                </sheet>
+                <!-- Start of Catter -->
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="message_ids"/>
+                </div>
+                <!-- End of Chatter -->
+            </form>
+        </field>
+    </record>
+    <!-- End of form View -->
+
+
+
+    <record id="action_components" model="ir.actions.act_window">
+        <field name="name">Components</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">itl_components</field>
+        <field name="view_mode">kanban,tree,form</field>
+    </record>
+</odoo>

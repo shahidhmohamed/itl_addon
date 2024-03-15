@@ -1,0 +1,22 @@
+<odoo>
+<record id="action_sub_fiber" model="ir.actions.act_window">
+        <field name="name">Fiber Master</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">sub_fiber</field>
+        <field name="view_mode">kanban,tree,form</field>
+    </record>
+
+
+    <!-- Start of Tree View -->
+    <record id = "sub_fiber_tree" model = "ir.ui.view">
+        <field name = "name">Fiber Master</field>
+        <field name = "model">sub_fiber</field>
+        <field name = "arch" type = "xml">
+            <tree>
+                <field name = "fibername"/>
+            </tree>
+        </field>
+    </record>
+    <!-- End of Tree View -->
+
+</odoo>

@@ -1,0 +1,28 @@
+<odoo>
+<record id="action_sub_tree_check" model="ir.actions.act_window">
+        <field name="name">Tree Check</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">lbx_mi_mpo_d001</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <!-- Start of Tree View -->
+    <record id = "tree_check_tree" model = "ir.ui.view">
+        <field name = "name">Tree Check 01</field>
+        <field name = "model">lbx_mi_mpo_d001</field>
+        <field name = "arch" type = "xml">
+            <tree>
+                <field name = "PurchaseorderNum02"/>
+
+                <field name = "PoNumber"/>
+                <field name = "ProductRef"/>
+                <field name = "ProductRef"/>
+            </tree>
+        </field>
+    </record>
+    <!-- End of Tree View -->
+
+    <!-- Start of form View -->
+    
+</odoo>

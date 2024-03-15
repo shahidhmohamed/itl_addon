@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<record id = "wsdl_get_form" model = "ir.ui.view">
+        <field name = "name">lbx_mi_gpo_i001</field>
+        <field name = "model">lbx_mi_gpo_i001</field>
+        <field name = "arch" type = "xml">
+            <form>
+                <sheet>
+
+                    <!-- start of button box -->
+                    <!-- End of button box -->
+                    <group>
+                        <group>
+                            <!-- <field name = "po"/> -->
+                            <field name = "order_number"/>
+                            <field name = "PurchaseOrderVersion"/>
+                            <field name = "PurchaseOrderDate"/>
+                            <field name = "LastRevisionDate"/>
+                            <field name = "Currency"/>
+                            <field name = "ConsigneeName"/>
+                            <field name = "ConsigneeName2"/>
+                            <field name = "ConsigneeName3"/>
+                            <field name = "ConsigneeAdd1"/>
+                            <field name = "ConsigneeAdd2"/>
+                            <field name = "ContactPerson"/>
+                            <field name = "ContactTel"/>
+                            <field name = "ContactEMail"/>
+                            <!-- <field name = "SalesPer"/> -->
+                            <field name = "SupplierName"/>
+                            <field name = "SupplierAdd1"/>
+                            <field name = "SupplierAdd2"/>
+                            <field name = "SupplierTel"/>
+                            <field name = "SupplierFax"/>
+                            <field name = "BillToName"/>
+                            <field name = "BillToName2"/>
+                            <field name = "BillToName3"/>
+                            <field name = "BillToAdd1"/>
+                            <field name = "BillToAdd2"/>
+                            <!-- <field name = "NotifyName2"/> -->
+                            <!-- <field name = "NotifyName3"/> -->
+                            <field name = "NotifyAdd1"/>
+                            <field name = "NotifyAdd2"/>
+                            <field name = "Season"/>
+                            <field name = "CusField1"/>
+                            <!-- <field name = "CusField2"/> -->
+                            <field name = "EndBuyerAccnt"/>
+                            <field name = "EndBuyer"/>
+                            <field name = "IncoTerms"/>
+                            <field name = "IncoTermDesc"/>
+                            <field name = "PaymentMode"/>
+                            <field name = "DeliveryAddressCode"/>
+                            <field name = "DeliveryAddress"/>
+                            <field name = "HeaderText"/>
+                            <field name = "HeaderNote"/>
+                            <field name = "OrderMode"/>
+                            <field name = "CompanyCode"/>
+                            <field name = "InitialReleaseDate"/>
+                            <field name = "InitialReleaseTime"/>
+
+                            <field name = "FinalReleaseDate"/>
+                            <!-- <field name = "FinalReleaseTime"/> -->
+                            <field name = "material_code"/>
+                            <field name = "Vendor_Material"/>
+                            <field name = "RefMaterial"/>
+                            <field name = "RefMaterial2"/>
+                            <field name = "ItemText"/>
+                            <field name = "MatPoText"/>
+                            <field name = "PageFormat"/>
+                            <field name = "MaterialDescription"/>
+                            <field name = "SalesOrder1"/>
+                            <field name = "SalesOrderItem"/>
+                            <field name = "DeliveryDate1"/>
+                            <field name = "Quantity1"/>
+                            <field name = "UOM"/>
+                            <field name = "NetPrice1"/>
+                            <field name = "Per"/>
+
+                            <field name = "DiscountPercentage"/>
+                            <field name = "DiscountValue"/>
+                            <!-- <field name = "NetValue1"/> -->
+                            <field name = "Text"/>
+                            <field name = "Gender"/>
+                            <field name = "OrderReason"/>
+                            <field name = "GarmentType"/>
+                            <field name = "PTLcode"/>
+                            <field name = "ShipMode"/>
+                            <field name = "SalesOrderSeason"/>
+                            <field name = "BuyYear"/>
+                            <field name = "Brand"/>
+                            <field name = "DepartmentCode"/>
+                            <field name = "EmotionalSpace"/>
+                            <field name = "PlanningGroup"/>
+                            <field name = "CPO"/>
+
+                            <!-- <field name = "ExFactoryDate"/> -->
+                            <field name = "CustomerStyle"/>
+                            <!-- <field name = "CustomerStyleDesc"/>
+                            <field name = "CustomerRef1"/>
+                            <field name = "CustomerRef2"/>
+                            <field name = "CustomerRef3"/>
+                            <field name = "FinishedGoodSeason"/>
+                            <field name = "FinishedGoodGender"/>
+                            <field name = "FinishedGoodGarmentType"/>
+                            <field name = "CustomerReference3"/>
+                            <field name = "SizeDimension"/>
+                            <field name = "BuyName"/>
+                            <field name = "MaterialNoUsedByVendor"/>
+                            <field name = "FinishingMethod"/>
+                            <field name = "WidthSizeTkt"/>
+                            <field name = "FinishedGoodsDestination"/>
+
+                            <field name = "FinishedGoodColorCode"/>
+                            <field name = "BOMText1_FabricDetails"/>
+                            <field name = "RetailerName"/>
+                            <field name = "DeliveryPlant"/>
+                            <field name = "MaterialSurcharge"/>
+                            <field name = "MatSurchargeCurrency"/> -->
+                            <field name = "ScheduleLineNo"/>
+                            <field name = "GridValue"/>
+                            <field name = "OverDeliveryTolerance"/>
+                            <field name = "UnderDeleveryTol"/>
+                            <field name = "VenorMaterialCode"/>
+                            <field name = "additionalskuno"/>
+                            <field name = "fg_size"/>
+                            
+
+
+                            
+    
+                            
+                        </group>
+                        <group>
+                        <button name="store_decoded_data" string="GETPO" type="object" class="btn btn-primary" />
+                        <button name="perform_additional_action" string="Store" type="object" class="btn btn-primary" />
+
+                        </group>
+                    </group>
+
+
+
+
+                </sheet>
+                <!-- Start of Catter -->
+                <!-- End of Chatter -->
+            </form>
+        </field>
+    </record>
+    <!-- End of form View -->
+
+    <record id="action_wsd_get" model="ir.actions.act_window">
+        <field name="name">lbx_mi_gpo_i001</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">lbx_mi_gpo_i001</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

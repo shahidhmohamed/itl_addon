@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <!-- it show when module updated data wont update -->
+    <data noupdate="1">
+        <record id="brand_Classic" model="care_instruction">
+            <field name="Description">Classic</field>
+            <field name="No">10001</field>
+        </record>
+
+
+        <brand>Classic</brand>
+        <brand></brand>
+        <brand></brand>
+        <brand></brand>
+        <brand>Very Sexy</brand>
+        <brand></brand>
+        <brand></brand>
+        <brand></brand>
+        <brand></brand>
+        <brand></brand>
+        <brand>PINK Obsolete</brand>
+        <brand>Price Tickets/Stickers</brand>
+        <brand>Grey Labels</brand>
+        <brand>VS Beauty</brand>
+        <brand>PINK MISC</brand>
+        <brand>Holiday 09</brand>
+        <brand>VS Grey International</brand>
+        <brand>Victoria</brand>
+        <brand>Lacie</brand>
+        <brand>Holiday 10</brand>
+        <brand>Cotton Logo</brand>
+
+
+
+    </data>
+
+</odoo>

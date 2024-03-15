@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="action_coo_master" model="ir.actions.act_window">
+        <field name="name">COUNTRY OF ORIGIN MASTER</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">lbx_coo_master</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+
+    <!-- Start of Tree View -->
+    <record id = "coo_master_tree" model = "ir.ui.view">
+        <field name = "name">COUNTRY OF ORIGIN MASTER</field>
+        <field name = "model">lbx_coo_master</field>
+        <field name = "arch" type = "xml">
+            <tree editable="bottom">
+                <field name = "Coo_1"/>
+                <field name = "coo_name"/>
+            </tree>
+        </field>
+    </record>
+</odoo>

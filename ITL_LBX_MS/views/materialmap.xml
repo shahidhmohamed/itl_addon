@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- <menuitem id="mapping_tab" name="Mapping Tab" parent ="Mapping01" action ="action_type_lab_new" sequence="10" />
+
+    <menuitem id="reference_master" name="Reference Master" parent ="Mapping01" action ="action_reference_master" sequence="20" />
+
+    <menuitem id="size_id" name="Size ID" parent ="Mapping01" action ="action_size_id" sequence="30" />-->
+
+    <!-- <menuitem id="get_po_details" name="Get Po MAS" action="action_get_po_test" parent ="Mapping01" sequence="40" />  -->
+
+
+    <!-- <menuitem id="tree_check" name="tree check" action="action_sub_tree_check" parent ="Mapping01" sequence="80" /> -->
+    <!-- <menuitem id="wsdl_get" name="get check" action="action_wsd_get" parent ="Mapping01" sequence="90" /> -->
+
+    <!-- 2023-12-09 -->
+
+
+
+
+
+</odoo>

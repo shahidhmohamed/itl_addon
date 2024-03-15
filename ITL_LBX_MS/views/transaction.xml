@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Start of form View -->
+    <record id = "transaction_test_form" model = "ir.ui.view">
+        <field name = "name">Transaction</field>
+        <field name = "model">transaction</field>
+        <field name = "arch" type = "xml">
+            <form>
+                <header>
+                    <button name="state" widget="statusbar" options="{'clickable':'1'}"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,sent,purchase" readonly="1"/>
+                </header>
+                <sheet>
+
+                    <div class="oe_title">
+                        <span class="o_form_label">Automation Purchase Order </span>
+                        <h1 class="d-flex">
+                            <field name="priority" widget="priority" class="me-3"/>
+                            <field name="Po_No" readonly="1"/>
+                        </h1>
+                    </div>
+
+                    <group>
+                        <group>
+                            <field name = "name" style="font-size: 15px;"/>
+                            <field name = "Activities"/>
+                            <field name = "Company"/>
+                            <field name = "Confirmationdate"/>
+                        </group>
+                        <group>
+                            <field name = "Buyer" widget="many2one_avatar"/>
+                            <field name = "currency_id" invisible="1"/>
+                            <field name = "currency_test"/>
+                        </group>
+                    </group>
+
+                    <!-- Note book -->
+
+                    <!-- <notebook>
+                        <page string="Purchase order" name="Purchase_order">
+                            <field name ="purchaseorder_lines">
+                                <tree editable="bottom">
+                                    <field name = "product_id"/>
+                                    <field name = "product_qty"/>
+                                    <field name = "purchaseorder_id" invisible="1"/>
+                                </tree>
+                                <form string ="purchaseorder">
+                                    <group>
+                                        <group>
+                                            <field name = "product_id"/>
+                                            <field name = "product_qty"/>
+                                        </group>
+                                    </group>
+                                </form>
+                            </field>
+                        </page>
+                    </notebook> -->
+                    <notebook>
+                        <page string="Purchase order" name="Purchase_order">
+                            <field name ="purchaseorder_lines">
+                                <tree editable="bottom">
+                                                                   
+                                    <field name = "PurchaseOrderNo" optional="show"/>
+                                    <field name = "currency_id" invisible="1"/>
+                                    <field name = "LastRevisionDate" optional="show"/>
+                                    <field name = "PurchaseOrderLine" optional="show"/>
+                                    <field name = "MaterialCode" optional="show"/>
+                                    <field name = "RefMaterial" optional="show"/>
+                                    <field name = "Materialid" optional="show"/>
+                                    <field name = "SalesOrder" optional="show"/>
+                                    <field name = "Quantity" optional="show"/>
+                                    <field name = "UoM" optional="show"/>
+                                    <field name = "NetPrice" optional="show"/>
+                                    <field name = "Per" optional="show"/>
+                                    <field name = "Net_value" optional="show"/>
+                                    <field name = "Cus_order" optional="show"/>
+                                    <field name = "Reference" optional="show"/>
+                                    <field name = "Size_id" optional="show"/>
+                                    <field name = "Style" optional="show"/>
+                                    <field name = "DDate" optional="show"/>
+                                    <field name = "Color_code" optional="show"/>
+                                    <field name="price_unit" optional="show"/>  
+                                    <field name="Test" optional="show" sum="Test"/>
+                                </tree>
+                                <form>
+                                    <group>
+                                        <field name="PurchaseOrderNo"/>
+                                        <field name="LastRevisionDate"/>
+                                        <field name="PurchaseOrderLine"/>
+                                        <field name="MaterialCode"/>
+                                        <field name="RefMaterial"/>
+                                        <field name="MaterialDescription"/>
+                                        <field name="SalesOrder"/>
+                                        <field name="SOLine"/>
+                                        <field name="Quantity"/>
+                                        <field name="UoM"/>
+                                        <field name="NetPrice"/>
+                                    </group>
+                                </form>
+                            </field>
+                        </page>
+                        <page string="Material Mapping" name="Material_Mapping">
+                            <field name ="Material_lines">
+                                <tree editable="bottom">
+                                    <field name="Material" optional="show"/>
+                                    <field name="DateCode" optional="show"/>
+                                    <field name="Silhouette" optional="show"/>
+                                    <field name="CareCode" optional="show"/>
+                                    <field name="composition" optional="show"/>
+                                    <field name="Collection" optional="show"/>
+                                </tree>
+                                <form>
+                                    <group>
+                                        <field name="Material"/>
+                                        <field name="DateCode"/>
+                                        <field name="Silhouette"/>
+                                        <field name="CareCode"/>
+                                        <field name="composition"/>
+                                        <field name="Collection"/>
+                                    </group>
+                                </form>
+                            </field>
+                        </page>
+                        <page string="All" name="All">
+                            <field name ="Material_All_lines">
+                                <tree editable="bottom">
+                                    <field name="MaterialCode" optional="show"/>
+                                    <field name="MaterialDescription" optional="show"/>
+                                    <field name="Reference" optional="show"/>
+                                    <field name="SizeID" optional="show"/>
+                                    <field name="Style" optional="show"/>
+                                    <field name="DateCode" optional="show"/>
+                                    <field name="BGcolour" optional="show"/>
+                                    <field name="Season" optional="show"/>
+                                    <field name="RN" optional="show"/>
+                                    <field name="CA" optional="show"/>
+                                </tree>
+                                <form>
+                                    <group>
+                                        <field name="MaterialCode" />
+                                        <field name="MaterialDescription"/>
+                                        <field name="Reference"/>
+                                        <field name="SizeID"/>
+                                        <field name="Style"/>
+                                        <field name="DateCode"/>
+                                        <field name="BGcolour"/>
+                                        <field name="Season"/>
+                                        <field name="RN"/>
+                                        <field name="CA"/>
+                                    </group>
+                                </form>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <!-- Start of Catter -->
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" groups="base.group_user"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
+                <!-- End of Chatter -->
+            </form>
+        </field>
+    </record>
+    <!-- End of form View -->
+
+
+    <!-- Start of treee -->
+    <record id = "transaction_tree" model = "ir.ui.view">
+        <field name = "name">Transaction</field>
+        <field name = "model">transaction</field>
+        <field name = "arch" type = "xml">
+            <tree >
+                <field name="priority" optional="show" widget="priority" nolabel="1"/>
+                <field name = "Po_No" optional="show" />
+                <field name = "currency_id" invisible="1"/>
+                <field name = "PurchaseOrderNo" optional="show"/>
+                <field name = "LastRevisionDate" optional="show"/>
+                <field name = "PurchaseOrderLine" optional="show"/>
+                <field name = "MaterialCode" optional="show"/>
+                <field name = "RefMaterial" optional="show"/>
+                <field name = "SalesOrder" optional="show"/>
+                <field name = "SOLine" optional="show"/>
+
+                <field name = "Materialid" optional="show"/>
+                <field name = "NetPrice" optional="show"/>
+                <field name = "Per" optional="show"/>
+                <field name = "Net_value" optional="show"/>
+                <field name = "Cus_order" optional="show"/>
+                <field name = "Reference" optional="show"/>
+                <field name = "Size_id" optional="show"/>
+                <field name = "Style" optional="show"/>
+                <field name = "DDate" optional="show"/>
+                <field name = "Color_code" optional="show"/>
+
+                <field name = "Quantity" optional="show"/>
+                <field name = "UoM" optional="show"/>
+                <field name = "Confirmationdate" optional="show"/>
+                <field name = "Vandor" optional="show"/>
+                <field name = "Company" optional="show"/>
+                <field name = "Buyer" widget="many2one_avatar"/>
+                <field name="activity_ids" widget="list_activity"/>
+                <field name = "BillingStatus" optional="show"/>
+                <field name = "ExpectedArrival" optional="show"/>
+                <field name = "Test" sum="Test" optional="show"/>
+                <!-- <field name = "price_subtotal"/> -->
+            </tree>
+        </field>
+    </record>
+    <!-- End of Tree View -->
+
+
+    <record id="action_transaction" model="ir.actions.act_window">
+        <field name="name">Transaction</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">transaction</field>
+        <field name="view_mode">tree,form,pivot,graph,activity</field>
+    </record>
+</odoo>

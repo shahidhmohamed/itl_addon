@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+
+
+    <!-- <menuitem id="get_po" name="Get Po"  action="action_get_po" parent ="automation_root" sequence="10" /> -->
+
+    <!-- <menuitem id="transaction" name="transaction" parent ="action_transaction"  action="action_transaction" sequence="20" /> -->
+
+
+</odoo>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="action_collection_master" model="ir.actions.act_window">
+        <field name="name">COLLECTION MASTER</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">lbx_collection_master</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+
+    <!-- Start of Tree View -->
+    <record id = "collection_master_tree" model = "ir.ui.view">
+        <field name = "name">COLLECTION MASTER</field>
+        <field name = "model">lbx_collection_master</field>
+        <field name = "arch" type = "xml">
+            <tree editable="bottom">
+                <field name = "Collection"/>
+                <field name = "Collection_name"/>
+            </tree>
+        </field>
+    </record>
+</odoo>

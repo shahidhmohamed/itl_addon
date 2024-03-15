@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="action_mapping" model="ir.actions.act_window">
+        <field name="name">Mapping</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">material.mapping</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>
